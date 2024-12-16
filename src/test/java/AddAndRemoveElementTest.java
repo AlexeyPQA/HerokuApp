@@ -29,8 +29,8 @@ public class AddAndRemoveElementTest {
 
         driver.findElement(By.xpath("//button[text()='Delete']")).click();
 
-        boolean buttonOnPage = driver.findElement(By.xpath("//button[text()='Delete']")).isDisplayed();
-        Assert.assertTrue(buttonOnPage);
+        boolean buttonOnPages = driver.findElement(By.xpath("//button[text()='Delete']")).isDisplayed();
+        Assert.assertTrue(buttonOnPages);
     }
 
     @AfterMethod

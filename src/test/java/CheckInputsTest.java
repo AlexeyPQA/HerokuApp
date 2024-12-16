@@ -37,13 +37,13 @@ public class CheckInputsTest {
 
         driver.navigate().refresh();
         driver.findElement(By.tagName("input")).sendKeys("555");
-        String keysResult = driver.findElement(By.tagName("input")).getAttribute("value");
-        Assert.assertEquals(keysResult, "555");
+        String keysResults = driver.findElement(By.tagName("input")).getAttribute("value");
+        Assert.assertEquals(keysResults, "555");
 
         driver.navigate().refresh();
         driver.findElement(By.tagName("input")).sendKeys("zzz");
-        String charResult = driver.findElement(By.tagName("input")).getAttribute("value");
-        Assert.assertEquals(charResult, "");
+        String charResults = driver.findElement(By.tagName("input")).getAttribute("value");
+        Assert.assertEquals(charResults, "");
     }
 
     @AfterMethod
