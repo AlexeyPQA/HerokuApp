@@ -20,8 +20,7 @@ public class AddAndRemoveElementTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-
-
+    
     @Test
     public void addAndRemoveElements() {
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
@@ -30,7 +29,7 @@ public class AddAndRemoveElementTest {
 
         driver.findElement(By.xpath("//button[text()='Delete']")).click();
 
-        boolean buttonOnPage = driver.findElement(By.xpath("//button[text()='Delete']")).isEnabled();
+        boolean buttonOnPage = driver.findElement(By.xpath("//button[text()='Delete']")).isDisplayed();
         Assert.assertTrue(buttonOnPage);
     }
 

@@ -31,18 +31,15 @@ public class CheckboxesCheckAndUncheckTest {
         boolean firstcheckbox1 = driver.findElement(By.cssSelector("[type=checkbox")).isSelected();
         Assert.assertTrue(firstcheckbox1);
 
-
         boolean secondcheckbox = driver.findElement(By.xpath("/html/body/div[2]/div/div/form/input[2]")).isSelected();
         Assert.assertTrue(secondcheckbox);
         driver.findElement(By.xpath("/html/body/div[2]/div/div/form/input[2]")).click();
         boolean secondcheckbox1 = driver.findElement(By.cssSelector("[type=checkbox")).isSelected();
         Assert.assertTrue(secondcheckbox1);
-
     }
 
     @AfterMethod
     public void tearDown() {
         driver.quit();
     }
-
 }

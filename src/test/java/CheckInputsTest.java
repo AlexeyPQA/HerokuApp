@@ -44,12 +44,9 @@ public class CheckInputsTest {
         driver.findElement(By.tagName("input")).sendKeys("zzz");
         String charResult = driver.findElement(By.tagName("input")).getAttribute("value");
         Assert.assertEquals(charResult, "");
-
     }
 
     @AfterMethod
     public void tearDown() {
-        driver.quit();
-    }
-
+        driver.quit();}
 }
